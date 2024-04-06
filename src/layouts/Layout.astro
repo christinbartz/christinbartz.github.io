@@ -1,5 +1,6 @@
 ---
 import ThemeToggle from "../components/ThemeToggle.astro";
+import "../styles/variables.css";
 interface Props {
   title: string;
 }
@@ -23,56 +24,6 @@ const { title } = Astro.props;
   </body>
 </html>
 <style is:global>
-  :root {
-    --color-background-dark: #1b1a2c;
-    --color-text-dark: #ffffff;
-    --color-highlight-dark: #907ad6;
-    --color-highlight-additional-dark: #4b4070; /*used for creating the gradient*/
-    --color-highlight-secondary-dark: #a8abfc;
-    --color-highlight-secondary-additional-dark: #4f518c; /*used for creating the gradient*/
-    --color-link-dark: #7fdeff;
-    --color-link-background-light: #7fdeff40;
-    --color-hover-border-dark: #dabfff80;
-    --color-hover-background-dark: #dabfff1a;
-
-    --gradient-highlight-dark: linear-gradient(
-      180deg,
-      var(--color-highlight-dark) 0%,
-      var(--color-highlight-additional-dark) 100%
-    );
-    --gradient-highlight-secondary-dark: linear-gradient(
-      23.02deg,
-      var(--color-highlight-secondary-additional-dark) 31.66%,
-      var(--color-highlight-secondary-dark) 86.67%
-    );
-    --gradient-background-dark: linear-gradient(
-      90deg,
-      rgba(127, 222, 255, 0.15) -15.64%,
-      rgba(27, 26, 44, 0.15) 35.48%
-    );
-
-    --color-background-light: #ffffff;
-    --color-text-light: #0f3d38;
-    --color-highlight-light: #ff9f1c;
-    --color-highlight-additional-light: #f9b85f;
-    --color-highlight-secondary-light: #ffbf69;
-    --color-highlight-secondary-additional-light: #fccf94;
-    --color-link-light: #7fdeff;
-    --color-link-background-light: #7fdeff26;
-    --color-hover-border-light: #cbf3f0cc;
-    --color-hover-background-light: #cbf3f026;
-
-    --gradient-highlight-light: linear-gradient(
-      180deg,
-      var(--color-highlight-light) 0%,
-      var(--color-highlight-additional-light) 100%
-    );
-    --gradient-highlight-secondary-light: linear-gradient(
-      23.02deg,
-      var(--color-highlight-secondary-additional-light) 31.66%,
-      var(--color-highlight-secondary-light) 86.67%
-    );
-  }
   :root,
   html.customTheme {
     --color-background: var(--color-background-light);
