@@ -6,10 +6,11 @@ const projectsCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    // image: z.object({
-    //   url: z.string(),
-    //   alt: z.string()
-    // }),
+    image: z.object({
+      url: z.string(),
+      alt: z.string(),
+    }),
+    link: z.string().url(),
     tags: z.array(z.string()),
   }),
 });
