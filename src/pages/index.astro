@@ -1,14 +1,20 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
+
+const allProjects = await getCollection("projects");
 ---
 
 <Layout title="Welcome to My Portfolio.">
   <main>
     <div>Hello World :D</div>
-    <div class="gradient-dark-1"></div>
+    <!-- <div class="gradient-dark-1"></div>
     <div class="gradient-dark-2"></div>
     <div class="gradient-light-1"></div>
-    <div class="gradient-light-2"></div>
+    <div class="gradient-light-2"></div> -->
+    <ul>
+      {allProjects.map(project => <li>{project.data.title}</li>)}
+    </ul>
   </main>
 </Layout>
 
