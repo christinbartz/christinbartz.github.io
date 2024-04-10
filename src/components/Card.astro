@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets";
+import Tag from "./Tag.astro";
+
+const {
+  timeframe = null,
+  title,
+  description,
+  imageUrl = null,
+  imageAlt = null,
+  link,
+  tags,
+} = Astro.props;
+---
+
+<li>
+  <a href={link} target="_blank">
+    <div>
+      {timeframe && <div>{timeframe}</div>}
+      <h4>{title}</h4>
+      <div>
+        {
+          imageUrl && imageAlt && (
+            <Image src={imageUrl} alt={imageAlt} width={400} height={260} />
+          )
+        }
+        <p>{description}</p>
+      </div>
+      <div>
+        {tags.map(tag => <Tag label={tag} />)}
+      </div>
+    </div>
+  </a>
+</li>

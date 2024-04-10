@@ -1,9 +1,10 @@
 ---
 import { getCollection } from "astro:content";
-import CardProject from "../components/CardProject.astro";
+import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 
 const allProjects = await getCollection("projects");
+const allResume = await getCollection("resume");
 ---
 
 <Layout title="Welcome to My Portfolio.">
@@ -13,10 +14,25 @@ const allProjects = await getCollection("projects");
     <div class="gradient-dark-2"></div>
     <div class="gradient-light-1"></div>
     <div class="gradient-light-2"></div> -->
+    <h3>Erfahrung</h3>
+    <ul>
+      {
+        allResume.map(resume => (
+          <Card
+            timeframe={resume.data.timeframe}
+            title={resume.data.title}
+            description={resume.data.description}
+            link={resume.data.link}
+            tags={resume.data.tags}
+          />
+        ))
+      }
+    </ul>
+    <h3>Projekte</h3>
     <ul>
       {
         allProjects.map(project => (
-          <CardProject
+          <Card
             title={project.data.title}
             description={project.data.description}
             imageUrl={project.data.image.url}
