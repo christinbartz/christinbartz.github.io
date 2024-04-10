@@ -1,0 +1,55 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+
+const allProjects = await getCollection("projects");
+const allResume = await getCollection("resume");
+---
+
+<Layout title="Hello World :D">
+  <main>
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <div class="gradient-dark-1"></div>
+    <div class="gradient-dark-2"></div>
+    <div class="gradient-light-1"></div>
+    <div class="gradient-light-2"></div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: var(--color-text);
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .gradient-dark-1 {
+    height: 100px;
+    width: 100px;
+    background: var(--gradient-highlight-dark);
+  }
+
+  .gradient-dark-2 {
+    height: 100px;
+    width: 100px;
+    background: var(--gradient-highlight-secondary-dark);
+  }
+
+  .gradient-light-1 {
+    height: 100px;
+    width: 100px;
+    background: var(--gradient-highlight-light);
+  }
+
+  .gradient-light-2 {
+    height: 100px;
+    width: 100px;
+    background: var(--gradient-highlight-secondary-light);
+  }
+</style>
