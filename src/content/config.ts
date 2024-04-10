@@ -14,7 +14,19 @@ const projectsCollection = defineCollection({
     tags: z.array(z.string()),
   }),
 });
+
+const resumeCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    timeframe: z.string(),
+    title: z.string(),
+    description: z.string(),
+    link: z.string().url(),
+    tags: z.array(z.string()),
+  }),
+});
 // Export a single `collections` object to register your collection(s)
 export const collections = {
   projects: projectsCollection,
+  resume: resumeCollection,
 };
