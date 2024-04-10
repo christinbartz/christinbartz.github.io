@@ -18,43 +18,44 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
+  <ThemeToggle />
   <body>
-    <ThemeToggle />
     <slot />
   </body>
-</html>
-<style is:global>
-  :root,
-  html.customTheme {
-    --color-background: var(--color-background-light);
-    --color-text: var(--color-text-light);
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
+
+  <style is:global>
+    :root,
+    html.customTheme {
+      --color-background: var(--color-background-light);
+      --color-text: var(--color-text-light);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-background: var(--color-background-dark);
+        --color-text: var(--color-text-dark);
+      }
+    }
+
+    html.customTheme.dark {
       --color-background: var(--color-background-dark);
       --color-text: var(--color-text-dark);
     }
-  }
 
-  html.customTheme.dark {
-    --color-background: var(--color-background-dark);
-    --color-text: var(--color-text-dark);
-  }
-
-  html {
-    font-family: system-ui, sans-serif;
-    background: var(--color-background);
-    color: var(--color-text);
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-</style>
+    html {
+      font-family: system-ui, sans-serif;
+      background: var(--color-background);
+      color: var(--color-text);
+    }
+    code {
+      font-family:
+        Menlo,
+        Monaco,
+        Lucida Console,
+        Liberation Mono,
+        DejaVu Sans Mono,
+        Bitstream Vera Sans Mono,
+        Courier New,
+        monospace;
+    }
+  </style>
+</html>
