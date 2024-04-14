@@ -9,40 +9,51 @@ const allResume = await getCollection("resume");
 
 <Layout title="Welcome to My Portfolio.">
   <main>
-    <div>Hello World :D</div>
-    <!-- <div class="gradient-dark-1"></div>
-    <div class="gradient-dark-2"></div>
-    <div class="gradient-light-1"></div>
-    <div class="gradient-light-2"></div> -->
-    <h3>Erfahrung</h3>
-    <ul>
-      {
-        allResume.map(resume => (
-          <Card
-            timeframe={resume.data.timeframe}
-            title={resume.data.title}
-            description={resume.data.description}
-            link={resume.data.link}
-            tags={resume.data.tags}
-          />
-        ))
-      }
-    </ul>
-    <h3>Projekte</h3>
-    <ul>
-      {
-        allProjects.map(project => (
-          <Card
-            title={project.data.title}
-            description={project.data.description}
-            imageUrl={project.data.image.url}
-            imageAlt={project.data.image.alt}
-            link={project.data.link}
-            tags={project.data.tags}
-          />
-        ))
-      }
-    </ul>
+    <section>
+      <h3>Über mich</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+        amet.
+      </p>
+    </section>
+
+    <section>
+      <h3>Erfahrung</h3>
+      <ul>
+        {
+          allResume.map(resume => (
+            <Card
+              timeframe={resume.data.timeframe}
+              title={resume.data.title}
+              description={resume.data.description}
+              link={resume.data.link}
+              tags={resume.data.tags}
+            />
+          ))
+        }
+      </ul>
+    </section>
+
+    <section>
+      <h3>Projekte</h3>
+      <ul>
+        {
+          allProjects.map(project => (
+            <Card
+              title={project.data.title}
+              description={project.data.description}
+              imageUrl={project.data.image.url}
+              imageAlt={project.data.image.alt}
+              link={project.data.link}
+              tags={project.data.tags}
+            />
+          ))
+        }
+      </ul>
+    </section>
   </main>
 </Layout>
 
