@@ -1,3 +1,14 @@
+# Portfolio 2024
+
+## About
+
+This project was heavily inspired by [Brittany Chiang's portfolio](https://brittanychiang.com/).
+It's built with [Astro](https://astro.build/) and will eventually be deployed with [Vercel](https://vercel.com/)
+
+## Library
+
+For Style references check the library.astro file or go to the /library subpage
+
 # Astro Starter Kit: Basics
 
 ```sh
