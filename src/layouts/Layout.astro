@@ -1,4 +1,5 @@
 ---
+import Header from "../components/Header.astro";
 import ThemeToggle from "../components/ThemeToggle.astro";
 import "../styles/variables.css";
 interface Props {
@@ -18,8 +19,15 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <ThemeToggle />
-  <body>
+
+  <body class="main-layout">
+    <Header
+      title="Christin Bartz"
+      subtitle="Frontend Developer"
+      description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+    >
+      <ThemeToggle />
+    </Header>
     <slot />
   </body>
 
@@ -56,6 +64,18 @@ const { title } = Astro.props;
         Bitstream Vera Sans Mono,
         Courier New,
         monospace;
+    }
+
+    .main-layout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media screen and (min-width: 1280px) {
+      .main-layout {
+        flex-direction: row;
+        align-items: flex-start;
+      }
     }
   </style>
 </html>

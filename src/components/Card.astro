@@ -13,15 +13,21 @@ const {
 } = Astro.props;
 ---
 
-<li>
-  <a href={link} target="_blank">
+<li class="card">
+  <a class="card__link" href={link} target="_blank">
     <div>
       {timeframe && <div>{timeframe}</div>}
       <h4>{title}</h4>
       <div>
         {
           imageUrl && imageAlt && (
-            <Image src={imageUrl} alt={imageAlt} width={400} height={260} />
+            <Image
+              class="card__image"
+              src={imageUrl}
+              alt={imageAlt}
+              width={400}
+              height={260}
+            />
           )
         }
         <p>{description}</p>
@@ -32,3 +38,18 @@ const {
     </div>
   </a>
 </li>
+
+<style>
+  .card {
+    list-style: none;
+  }
+
+  .card__link {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  .card__image {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
