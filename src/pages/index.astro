@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Card from "../components/Card.astro";
+import CardList from "../components/CardList.astro";
 import Layout from "../layouts/Layout.astro";
 
 const allProjects = await getCollection("projects");
@@ -22,7 +23,7 @@ const allResume = await getCollection("resume");
 
     <section>
       <h3>Erfahrung</h3>
-      <ul>
+      <CardList>
         {
           allResume.map(resume => (
             <Card
@@ -34,12 +35,12 @@ const allResume = await getCollection("resume");
             />
           ))
         }
-      </ul>
+      </CardList>
     </section>
 
     <section>
       <h3>Projekte</h3>
-      <ul>
+      <CardList>
         {
           allProjects.map(project => (
             <Card
@@ -52,7 +53,7 @@ const allResume = await getCollection("resume");
             />
           ))
         }
-      </ul>
+      </CardList>
     </section>
   </main>
 </Layout>
@@ -60,34 +61,11 @@ const allResume = await getCollection("resume");
 <style>
   main {
     margin: auto;
-    padding: 1rem;
+    padding: 2rem;
     width: 800px;
     max-width: calc(100% - 2rem);
     color: var(--color-text);
     font-size: 20px;
     line-height: 1.6;
-  }
-  .gradient-dark-1 {
-    height: 100px;
-    width: 100px;
-    background: var(--gradient-highlight-dark);
-  }
-
-  .gradient-dark-2 {
-    height: 100px;
-    width: 100px;
-    background: var(--gradient-highlight-secondary-dark);
-  }
-
-  .gradient-light-1 {
-    height: 100px;
-    width: 100px;
-    background: var(--gradient-highlight-light);
-  }
-
-  .gradient-light-2 {
-    height: 100px;
-    width: 100px;
-    background: var(--gradient-highlight-secondary-light);
   }
 </style>
