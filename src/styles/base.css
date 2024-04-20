@@ -1,0 +1,24 @@
+h1 {
+  font-size: var(--fs-42);
+  font-weight: var(--fw-semibold);
+}
+
+h2 {
+  font-size: var(--fs-24);
+  font-weight: var(--fw-semibold);
+}
+
+h3 {
+  font-size: var(--fs-20);
+  font-weight: var(--fw-semibold);
+}
+
+h4 {
+  font-size: var(--fs-16);
+  font-weight: var(--fw-semibold);
+}
+
+p {
+  font-size: var(--fs-16);
+  font-weight: var(--fw-regular);
+}
