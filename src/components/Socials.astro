@@ -16,6 +16,15 @@ const allSocials = await getCollection("socials");
 </div>
 
 <style>
+  .socials {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+  }
+
+  a.socials__link {
+    color: transparent;
+  }
   .socials__link :global(svg) {
     height: 40px;
     fill: var(--color-text);

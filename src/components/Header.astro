@@ -6,28 +6,40 @@ const { title, subtitle, description } = Astro.props;
 
 <header class="header">
   <div class="header__feature"><slot /></div>
-  <h1 class="header__h1">{title}</h1>
-  <h2 class="header__h2">{subtitle}</h2>
+  <h1>{title}</h1>
+  <h2>{subtitle}</h2>
   <p>{description}</p>
   <Socials />
 </header>
 
 <style>
   .header {
-    padding: 2rem 2rem;
+    padding: 2rem 2rem 0 2rem;
+    top: 0;
   }
 
   .header__feature {
     margin-block-end: 1rem;
   }
 
-  .header__h1 {
+  .header h1 {
     margin-block-start: 0;
     margin-block-end: 0.5rem;
   }
 
-  .header__h2 {
+  .header h2 {
     margin-block-start: 0;
     margin-block-end: 1.5rem;
+  }
+
+  .header p {
+    margin-block-start: 0;
+    margin-block-end: 1.5rem;
+  }
+
+  @media screen and (min-width: 1280px) {
+    .header {
+      position: sticky;
+    }
   }
 </style>
