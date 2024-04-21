@@ -1,0 +1,15 @@
+---
+const { name } = Astro.props;
+
+import IconGithub from "./icons/IconGithub.astro";
+import IconLinkedin from "./icons/IconLinkedin.astro";
+
+const iconList = {
+  Github: IconGithub,
+  Linkedin: IconLinkedin,
+};
+
+const Component = iconList[name];
+---
+
+<Component />
