@@ -41,6 +41,9 @@ const { title } = Astro.props;
   </body>
 
   <style is:global>
+    * {
+      box-sizing: border-box;
+    }
     :root,
     html.customTheme {
       --color-background: var(--color-background-light);
