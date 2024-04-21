@@ -1,12 +1,11 @@
 ---
-import { getCollection } from "astro:content";
-import Layout from "../layouts/Layout.astro";
+import Icon, { iconList } from "../components/Icon.astro";
+import LibraryLayout from "../layouts/LibraryLayout.astro";
 
-const allProjects = await getCollection("projects");
-const allResume = await getCollection("resume");
+const iconLib = Object.keys(iconList);
 ---
 
-<Layout title="Hello World :D">
+<LibraryLayout title="Hello World :D">
   <main>
     <h1>h1</h1>
     <h2>h2</h2>
@@ -27,8 +26,23 @@ const allResume = await getCollection("resume");
         >The breakpoints were inspired by the Tailwind CSS breakpoints.</footnote
       >
     </section>
+    <section>
+      <h3>Icons:</h3>
+      <div class="icons">
+        {iconLib.map(item => <Icon name={item} />)}
+      </div>
+      <footnote
+        >The icons were sourced from <a
+          href="https://fontawesome.com/"
+          target="_blank">Font Awesome</a
+        > and the <a
+          href="https://docs.astro.build/en/getting-started/"
+          target="_blank">Astro documentation</a
+        >.</footnote
+      >
+    </section>
   </main>
-</Layout>
+</LibraryLayout>
 
 <style>
   main {
@@ -62,5 +76,16 @@ const allResume = await getCollection("resume");
     height: 100px;
     width: 100px;
     background: var(--gradient-highlight-secondary-light);
+  }
+
+  .icons {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+  }
+
+  .icons :global(svg) {
+    height: 40px;
+    fill: var(--color-text);
   }
 </style>
