@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+import Icon from "./Icon.astro";
+
+const allSocials = await getCollection("socials");
+---
+
+<div class="socials">
+  {
+    allSocials.map(social => (
+      <a href={social.data.link} target="_blank" class="socials__link">
+        <Icon name={social.data.icon} />
+      </a>
+    ))
+  }
+</div>
+
+<style>
+  .socials__link :global(svg) {
+    height: 40px;
+    fill: var(--color-text);
+  }
+</style>
