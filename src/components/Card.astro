@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Tag from "./Tag.astro";
+import TagList from "./TagList.astro";
 
 const {
   timeframe = null,
@@ -32,9 +33,9 @@ const {
         }
         <p>{description}</p>
       </div>
-      <div>
+      <TagList>
         {tags.map(tag => <Tag label={tag} />)}
-      </div>
+      </TagList>
     </div>
   </a>
 </li>
@@ -42,6 +43,12 @@ const {
 <style>
   .card {
     list-style: none;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .card:hover {
+    background-color: var(--color-hover-background);
   }
 
   .card__link {

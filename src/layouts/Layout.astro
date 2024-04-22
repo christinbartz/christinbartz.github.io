@@ -48,17 +48,26 @@ const { title } = Astro.props;
     html.customTheme {
       --color-background: var(--color-background-light);
       --color-text: var(--color-text-light);
+      --color-hover-background: var(--color-hover-background-light);
+      --color-tag: var(--color-tag-light);
+      --color-tag-background: var(--color-tag-background-light);
     }
     @media (prefers-color-scheme: dark) {
       :root {
         --color-background: var(--color-background-dark);
         --color-text: var(--color-text-dark);
+        --color-hover-background: var(--color-hover-background-dark);
+        --color-tag: var(--color-tag-dark);
+        --color-tag-background: var(--color-tag-background-dark);
       }
     }
 
     html.customTheme.dark {
       --color-background: var(--color-background-dark);
       --color-text: var(--color-text-dark);
+      --color-hover-background: var(--color-hover-background-dark);
+      --color-tag: var(--color-tag-dark);
+      --color-tag-background: var(--color-tag-background-dark);
     }
 
     html {
