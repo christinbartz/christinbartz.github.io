@@ -22,23 +22,6 @@ const allResume = await getCollection("resume");
     </section>
 
     <section>
-      <h3>Erfahrung</h3>
-      <CardList>
-        {
-          allResume.map(resume => (
-            <Card
-              timeframe={resume.data.timeframe}
-              title={resume.data.title}
-              description={resume.data.description}
-              link={resume.data.link}
-              tags={resume.data.tags}
-            />
-          ))
-        }
-      </CardList>
-    </section>
-
-    <section>
       <h3>Projekte</h3>
       <CardList>
         {
@@ -50,6 +33,23 @@ const allResume = await getCollection("resume");
               imageAlt={project.data.image.alt}
               link={project.data.link}
               tags={project.data.tags}
+            />
+          ))
+        }
+      </CardList>
+    </section>
+
+    <section>
+      <h3>Erfahrung</h3>
+      <CardList>
+        {
+          allResume.map(resume => (
+            <Card
+              timeframe={resume.data.timeframe}
+              title={resume.data.title}
+              description={resume.data.description}
+              link={resume.data.link}
+              tags={resume.data.tags}
             />
           ))
         }
