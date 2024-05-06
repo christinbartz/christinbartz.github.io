@@ -60,4 +60,13 @@
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-semibold: 600;
+
+  /*paddings and margins*/
+  --padding-layout-inline: 1.5rem;
+  --padding-content-inline: 1rem;
+
+  @media screen and (min-width: 1280px) {
+    --padding-layout-inline: 2rem;
+    --padding-content-inline: 1.5rem;
+  }
 }

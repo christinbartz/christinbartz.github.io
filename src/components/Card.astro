@@ -44,11 +44,18 @@ const {
   .card {
     list-style: none;
     border-radius: 0.5rem;
-    padding: 1rem 1.5rem;
+    padding: var(--padding-content-inline);
+    cursor: pointer;
+    border: 1px solid transparent;
+
+    @media screen and (min-width: 1280px) {
+      padding: var(--padding-content-inline);
+    }
   }
 
   .card:hover {
     background-color: var(--color-hover-background);
+    border-color: var(--color-hover-border);
   }
 
   .card__link {
@@ -58,5 +65,8 @@ const {
   .card__image {
     max-width: 100%;
     height: auto;
+  }
+  h4 {
+    margin-block-start: 0;
   }
 </style>
