@@ -63,3 +63,18 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+### update.sh
+
+Die Dependencies können mit dem update.sh Skript geupdated werden.
+Es kann vorkommen, dass es bei dem Versuch, das Skript auszuführen folgende Fehlermeldung kommt:
+
+```bash
+  permission denied: ./update.sh
+```
+
+In diesem Fall muss dem Skript die Erlaubnis zum Ausführen gegeben werden. Dafür einmal diesen Befehl ausführen:
+
+```bash
+  sudo chmod +x update.sh
+```
