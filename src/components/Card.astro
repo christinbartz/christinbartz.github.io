@@ -16,8 +16,8 @@ const {
 
 <li class="card">
   <a class="card__link" href={link} target="_blank">
-    {timeframe && <div>{timeframe}</div>}
-    <div class="card__content card__content--image">
+    {timeframe && <div class="card__timeframe">{timeframe}</div>}
+    <div class="card__content">
       {
         imageUrl && imageAlt && (
           <Image
@@ -34,17 +34,19 @@ const {
         <p>{description}</p>
       </div>
     </div>
-    <TagList>
-      {tags.map(tag => <Tag label={tag} />)}
-    </TagList>
+    <div class="card__tags">
+      <TagList>
+        {tags.map(tag => <Tag label={tag} />)}
+      </TagList>
+    </div>
   </a>
 </li>
 
 <style>
   .card {
+    margin: 0 var(--padding-content-inline);
     list-style: none;
     border-radius: 0.5rem;
-    margin: 0 var(--padding-content-inline);
     cursor: pointer;
     border: 1px solid transparent;
     display: flex;
@@ -70,7 +72,8 @@ const {
     text-decoration: none;
   }
 
-  .card__content--image {
+  .card__content {
+    padding-block-start: 0;
     margin-block-end: 1.25rem;
     display: flex;
     gap: 1.25rem;
@@ -93,8 +96,29 @@ const {
     }
   }
 
-  .card__text {
+  .card__timeframe {
+    margin-block-start: 1rem;
+
+    @media screen and (min-width: 768px) {
+      margin-block-start: 0;
+    }
+  }
+
+  .card__tags {
+    margin-block-end: 1.25rem;
+    @media screen and (min-width: 768px) {
+      margin-block-end: 0;
+    }
+  }
+
+  .card__timeframe,
+  .card__text,
+  .card__tags {
     padding: 0 var(--padding-content-inline);
+
+    @media screen and (min-width: 768px) {
+      padding: 0;
+    }
   }
 
   h4 {
