@@ -1,7 +1,7 @@
 ---
-timeframe: 2019 - heute
-title: "Neoskop GmbH | Application Developer"
-description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-link: "https://www.google.com"
-tags: ["React", "GraphQL"]
+timeframe: 2014 - 2017
+title: "business2internet | Web-Entwickler, studentische Aushilfe"
+description: "Erstellen von Websites für kleine Unternehmen."
+link: "https://business2internet.de/"
+tags: ["HTML", "CSS3", "Javascript", "Contao CMS"]
 ---

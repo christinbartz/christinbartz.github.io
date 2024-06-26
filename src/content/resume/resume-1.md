@@ -1,7 +1,17 @@
 ---
 timeframe: 2019 - heute
 title: "Neoskop GmbH | Application Developer"
-description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-link: "https://www.google.com"
-tags: ["React", "GraphQL"]
+description: "Webprojekte unterschiedlicher Größe. Betreuung und Optimierung und Erweiterung bestehender Projekte und Erstellen neuer Seiten und Komponenten. Zu den Kunden gehören enercity, Lotto Toto und die VHV."
+link: "https://www.neoskop.de/"
+tags:
+  [
+    "Typescript",
+    "Sass",
+    "React",
+    "Next",
+    "Astro",
+    "GraphQL",
+    "Contentful",
+    "Magnolia",
+  ]
 ---

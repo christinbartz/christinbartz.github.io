@@ -1,7 +1,7 @@
 ---
-timeframe: 2019 - heute
-title: "Neoskop GmbH | Application Developer"
-description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-link: "https://www.google.com"
-tags: ["React", "GraphQL"]
+timeframe: 2017 - 2019
+title: "Link Innovation GmbH | Web-Entwickler"
+description: "Agiles Arbeiten in Kundenteams. Projekte für große Unternehmenskunden wie VW und IAV."
+link: "https://www.link-innovation.de/"
+tags: ["Javascript", "Sass", "Vue", "React", "Cockpit CMS", "Highcharts"]
 ---
