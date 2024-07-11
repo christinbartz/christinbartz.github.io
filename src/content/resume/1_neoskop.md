@@ -8,7 +8,7 @@ tags:
     "Typescript",
     "Sass",
     "React",
-    "Next",
+    "Next.js",
     "Astro",
     "GraphQL",
     "Contentful",
