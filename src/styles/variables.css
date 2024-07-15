@@ -7,6 +7,7 @@
   --color-highlight-secondary-additional-dark: #4f518c; /*used for creating the gradient*/
   --color-tag-dark: #2f4239;
   --color-tag-background-dark: #81b29a;
+  --color-mobile-border-dark: #669bbc;
   --color-hover-border-dark: #669bbc;
   --color-hover-background-dark: #295b77;
 
@@ -34,6 +35,7 @@
   --color-highlight-secondary-additional-light: #fccf94; /*used for creating the gradient*/
   --color-tag-light: #780000;
   --color-tag-background-light: #f2c3b1;
+  --color-mobile-border-light: #a9b5bc;
   --color-hover-border-light: #81a9c0;
   --color-hover-background-light: #e6e3d1;
 
